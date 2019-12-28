@@ -1,0 +1,28 @@
+//共通
+
+$title-font: 'Hannotate SC',sans-serif;
+
+html {
+    font-size: 62.5%; //10px
+}
+
+body {
+    font-size: 16px;
+}
+
+.inner {
+    width: 90%;
+    margin: 50px auto 0px;
+} 
+
+.title {
+    font-size: 3rem;
+    font-family: $title-font;
+    font-weight: bold;
+}
+
+.content-wrap {
+    margin-top: 70px;
+}
+
+//

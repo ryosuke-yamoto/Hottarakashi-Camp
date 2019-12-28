@@ -1,0 +1,37 @@
+header {
+    background-image: url(../img/1564997899958.jpg);
+    background-size: 100% 100%;
+    color: white;
+    height: 500px;
+}
+
+.header-logo {
+    padding: 10px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $title-font;
+    .header-title {
+        font-size: 3rem;
+        
+    }
+    .header-nav {
+        line-height: 3rem;
+        li {
+        display: inline;
+        
+        &:not(:last-child)::after {
+            content: "/";
+            margin-left: 10px;
+        }
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    }
+}
+
+.header-text {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 480px;
+}

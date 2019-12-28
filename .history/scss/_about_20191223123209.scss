@@ -1,0 +1,19 @@
+.content-wrap.about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    .about-content {
+        width: 32%;
+    }
+}
+
+.about-img__wrap {
+    width: 100%;
+    height: 200px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 40%;
+    }
+}

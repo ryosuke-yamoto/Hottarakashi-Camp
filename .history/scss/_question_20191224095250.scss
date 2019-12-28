@@ -1,0 +1,11 @@
+.question-wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.question-content {
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+}

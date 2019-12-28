@@ -1,0 +1,20 @@
+.hotspring-text {
+    margin-top: 30px;
+}
+
+.hotspring-wrap {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    .hotspring-content {
+        height: 100%;
+        width: 50%;
+        button {
+            display: block;
+            margin: 0 auto;
+            line-height: 300px;
+            font-family: 'Comic Sans MS','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN', 
+            font-size: 2rem;
+        }
+    }
+}

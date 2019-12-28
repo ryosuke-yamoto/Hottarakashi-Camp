@@ -1,0 +1,23 @@
+.question-wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.question-content {
+    font-family: $text-font;
+    text-align: center;
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+    .question-text {
+        display: inline;
+        &::before {
+            content: "+";
+            margin-right: 10px;
+        }
+    }
+}
+
+.answer {
+    margin-top: 20px;
+}

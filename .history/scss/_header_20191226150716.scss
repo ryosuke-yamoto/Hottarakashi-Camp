@@ -1,0 +1,75 @@
+header {
+    background-image: url(../img/1564997899958.jpg);
+    background-size: 100% 100%;
+    color: white;
+    height: 500px;
+}
+
+.header-logo {
+    padding: 10px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $title-font;
+    .header-title {
+        font-size: 3rem;
+        @include sp {
+            font-size: 4vw;
+        }
+    }
+    .header-nav {
+        line-height: 3rem;
+        li {
+        display: inline;
+        &:not(:last-child)::after {
+            content: "/";
+            margin-left: 10px;
+        }
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+    }
+}
+
+.header-text {
+    margin-top: 200px;
+    font-size: 3rem;
+    font-family: 'Hannotate SC','HanziPen TC','Avenir Next Condensed',sans-serif;
+    text-shadow: 0px 0px 20px rgba(255,255,0,1);
+    text-align: center;
+    line-height: 6rem;
+    // line-height: 480px;
+    @include pc {
+        br {
+            display: none;
+        }
+    }
+}
+
+// sp
+
+.hum {
+    display: none;
+    @include sp {
+        width: 25px;
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        span {
+            height: 4px;
+            background-color: white;
+            &:first-child,
+            &:nth-child(2) {
+                width: 100%;
+            }
+            &:last-child {
+                width: 50%;
+            }
+        }
+    }
+}

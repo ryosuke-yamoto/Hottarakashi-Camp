@@ -1,0 +1,18 @@
+.access-section {
+    margin-top: 50px;
+}
+
+.title.access {
+    margin-left: 5%;
+}
+
+.content-wrap.access {
+    display: flex;
+    justify-content: space-between;
+    .access-map {
+        width: 60%;
+    }
+    .access-text {
+        width: 40%;
+    }
+}

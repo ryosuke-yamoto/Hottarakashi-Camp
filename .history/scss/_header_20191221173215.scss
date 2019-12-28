@@ -1,0 +1,14 @@
+header {
+    background-image: url(../img/1564997899958.jpg);
+    background-size: cover;
+    color: blue;
+}
+
+.header-logo {
+    padding: 10px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    .header-nav {
+        display: inline;
+    }
+}

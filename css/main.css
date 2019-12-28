@@ -1,0 +1,725 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:visited {
+  color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+}
+
+.inner {
+  width: 90%;
+  margin: 50px auto 0px;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: "Hannotate SC", sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 4.5vw;
+  }
+}
+
+.content-wrap {
+  margin-top: 70px;
+}
+
+p {
+  font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", sans-serif;
+}
+
+@media screen and (max-width: 550px) {
+  p {
+    font-size: 3vw;
+  }
+}
+
+header {
+  background-image: url(../img/1564997899958.jpg);
+  background-size: 100% 100%;
+  color: white;
+  height: 500px;
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    height: 300px;
+  }
+}
+
+.header-logo {
+  padding: 10px 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Hannotate SC", sans-serif;
+}
+
+.header-logo .header-title {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 950px) {
+  .header-logo .header-title {
+    font-size: 4.5vw;
+  }
+}
+
+.header-logo .header-nav {
+  line-height: 3rem;
+}
+
+.header-logo .header-nav li {
+  color: #C0C0C0;
+  display: inline-block;
+}
+
+.header-logo .header-nav li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.header-logo .header-nav li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #fff;
+  display: block;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.header-logo .header-nav li:hover {
+  color: white;
+}
+
+.header-logo .header-nav li:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+@media screen and (max-width: 950px) {
+  .header-logo .header-nav li {
+    display: none;
+  }
+}
+
+.header-text {
+  margin-top: 200px;
+  font-size: 3rem;
+  font-family: 'Hannotate SC','HanziPen TC','Avenir Next Condensed',sans-serif;
+  text-shadow: 0px 0px 20px yellow;
+  text-align: center;
+  line-height: 6rem;
+}
+
+@media screen and (min-width: 951px) {
+  .header-text br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header-text {
+    margin-top: 100px;
+    font-size: 4.5vw;
+  }
+}
+
+.hum-wrap {
+  display: none;
+  width: 100px;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 950px) {
+  .hum-wrap {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hum {
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .hum .humburgar-line {
+    height: 0.8vw;
+    background-color: white;
+    display: block;
+  }
+  .hum .humburgar-line:first-child, .hum .humburgar-line:nth-child(2) {
+    margin-bottom: 0.7vw;
+    width: 100%;
+  }
+  .hum .humburgar-line:last-child {
+    width: 50%;
+  }
+}
+
+.ddmenu {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: #555555;
+}
+
+.ddmenu li {
+  font-size: 0.5vw;
+  margin: 5px;
+}
+
+.ddmenu li::before {
+  content: "・";
+}
+
+.ddmenu li:hover {
+  cursor: pointer;
+}
+
+.content-wrap.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-wrap.about .about-content {
+  width: 31%;
+}
+
+@media screen and (max-width: 550px) {
+  .content-wrap.about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .content-wrap.about .about-content {
+    width: 100%;
+  }
+  .content-wrap.about .about-content:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
+.about-img__wrap {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 550px) {
+  .about-img__wrap {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.about-img__wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40%;
+}
+
+.about-text {
+  margin-top: 30px;
+  line-height: 2rem;
+}
+
+.about-text .elevation {
+  text-align: center;
+}
+
+.hotspring-text {
+  font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", sans-serif;
+  line-height: 2rem;
+}
+
+.hotspring-text br {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .hotspring-text {
+    line-height: 3rem;
+    text-align: center;
+  }
+  .hotspring-text br {
+    display: inline-block;
+  }
+}
+
+.hotspring-text.first {
+  margin-top: 70px;
+}
+
+.hotspring-wrap {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hotspring-wrap .hotspring-content {
+  height: 100%;
+  width: 50%;
+}
+
+.hotspring-wrap .hotspring-content button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  color: white;
+  font-family: "Comic Sans MS", "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN";
+  font-size: 2rem;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  background-color: #808080;
+  -webkit-box-shadow: 0px 5px black;
+          box-shadow: 0px 5px black;
+  cursor: pointer;
+}
+
+.hotspring-wrap .hotspring-content button:active {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.content-wrap.gallery {
+  width: 90%;
+  background-color: black;
+  padding: 10px 0px;
+}
+
+.main-flame {
+  content: "";
+  width: 60%;
+  height: 350px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.thumb-flame__wrap {
+  content: "";
+  width: 70%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px auto 0px;
+  background-color: black;
+}
+
+@media screen and (max-width: 550px) {
+  .thumb-flame__wrap {
+    height: 265px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.thumb-flame {
+  width: 18%;
+}
+
+.thumb-flame img {
+  border-radius: 40%;
+}
+
+@media screen and (max-width: 550px) {
+  .thumb-flame {
+    width: 30%;
+  }
+  .thumb-flame:first-child, .thumb-flame:nth-child(2) {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+}
+
+#gallery-section img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+}
+
+#gallery-section img:hover {
+  cursor: pointer;
+}
+
+.question-wrap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.question-content {
+  font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", sans-serif;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.question-content:not(:first-child) {
+  margin-top: 30px;
+}
+
+.question-content .question-text {
+  display: inline-block;
+}
+
+.question-content .question-text:hover {
+  cursor: pointer;
+}
+
+.question-content .question-text:before {
+  content: attr(data-name);
+  margin-right: 10px;
+}
+
+.answer {
+  margin-top: 20px;
+  display: none;
+}
+
+#access-section {
+  margin-top: 50px;
+}
+
+.title.access {
+  margin-left: 5%;
+}
+
+.content-wrap.access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
+}
+
+.content-wrap.access .access-map__wrap {
+  width: 55%;
+  height: 100%;
+}
+
+.content-wrap.access .access-map__wrap .access-map {
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrap.access .access-text {
+  width: 40%;
+  white-space: nowrap;
+}
+
+.content-wrap.access .access-text .address-table {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 950px) {
+  .content-wrap.access {
+    height: 400px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content-wrap.access .access-map__wrap {
+    width: 80%;
+  }
+  .content-wrap.access .access-text {
+    width: 60%;
+  }
+}
+
+.contact-form__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+
+.contact-form__wrap .contact-button {
+  display: block;
+  width: 40%;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  color: white;
+  border: 1px solid #FF9900;
+  background-color: #FF9900;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px black;
+          box-shadow: 0px 5px black;
+  cursor: pointer;
+}
+
+.contact-form__wrap .contact-button:active {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer {
+  height: 100px;
+  margin-top: 50px;
+  background-color: black;
+}
+
+.footer-logo small {
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.modal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.open {
+  display: block;
+}
+
+.modal-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 10px 0px;
+}
+
+.modal-logo h3 {
+  font-family: 'Hannotate SC',sans-serif;
+}
+
+.modal-logo .close-button:hover {
+  cursor: pointer;
+}
+
+.modal.hotspring {
+  width: 50vw;
+  background-color: black;
+}
+
+.modal.hotspring .modal-logo {
+  color: white;
+}
+
+.modal.hotspring .img-hot__wrap {
+  width: 70%;
+  height: 50%;
+  margin: 20px auto 0px;
+}
+
+.modal.hotspring .img-hot__wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal.hotspring p {
+  color: white;
+  margin: 10% 10px 10%;
+  text-align: center;
+}
+
+.contact-form {
+  width: 70vw;
+  height: 40vh;
+  max-width: 500px;
+  background-color: #fff;
+  border: 1px solid #000000;
+}
+
+.contact-form .modal-logo {
+  color: black;
+}
+
+.contact-form form {
+  width: 80%;
+  height: 60%;
+  margin: 20px auto 30px;
+}
+
+.contact-form form textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form .input-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact-form .input-form input {
+  width: 60px;
+}
+/*# sourceMappingURL=main.css.map */

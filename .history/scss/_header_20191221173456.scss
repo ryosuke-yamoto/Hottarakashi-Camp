@@ -1,0 +1,20 @@
+header {
+    background-image: url(../img/1564997899958.jpg);
+    background-size: cover;
+    color: white;
+    height: 500px;
+}
+
+.header-logo {
+    padding: 10px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    .header-title {
+        font-size: 3rem;
+    }
+    .header-nav {
+        li {
+        display: inline;
+    }
+    }
+}
