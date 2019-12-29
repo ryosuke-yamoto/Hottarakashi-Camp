@@ -42,7 +42,7 @@ document.addEventListener('click',function(event) {
     }
 })
 
-//モーダルの要素　モーダル出現ボタン定義
+//あっちの湯　こっちの湯　モーダル　出現
 
 let attiButton = document.querySelector('.atti-spring');
 
@@ -56,34 +56,29 @@ let kottiModal = document.querySelector('.kottinoyu');
 
 let contactModal = document.querySelector('.contact-form');
 
-//オーバーレイ定義　モーダルボタン押したらdiv要素が追加される
+//モーダル　オーバーレイ
 let overRay = document.createElement('div');
 
-overRay.classList.add('modal-bg')
+overRay.classList.toggle('modal-bg')
 
 let footer = document.querySelector('footer')
 
+document.body.insertBefore(overRay,footer)
 
-//JavaScriptでもオーバーレイ作れるよ
+let overRatStyle = {
+    display: 'none',
+    width: '100%',
+    height: '100%',
+    backgroundcolor: 'rgba(0,0,0,0,5)',
+    position: 'fixed',
+    zindex: '1'
+}
 
-// let overRayStyle = {
-//     display: 'none',
-//     width: '100%',
-//     height: '100%',
-//     backgroundcolor: 'rgba(0,0,0,0.5)',
-//     position: 'fixed',
-//     top: '0px',
-//     left:'0px',
-//     zindex: '1'
-// }
+for(var prop in overRatStyl) {
 
-// let over = overRay.style
-
-// for(var prop in overRayStyle) {
-
-//     overRay[prop] = overRayStyle[prop];
+    overRay[prop] = overRatStyl[prop];
     
-// }
+}
 
 //ボタンクリックしたらモーダルとオーバーレイ出現するよ
 
@@ -91,8 +86,7 @@ attiButton.addEventListener('click',function() {
     if (kottiModal.classList.contains('open') === false  &&
         contactModal.classList.contains('open') === false) {
         attiModal.classList.add('open');
-        //オーバーレイも出現させる
-        document.body.insertBefore(overRay,footer)
+        // attiModal.classList.add('open');
     } else {
         event.preventDefault();
     }
@@ -102,7 +96,6 @@ kottiButton.addEventListener('click',function() {
     if (attiModal.classList.contains('open') === false &&
         contactModal.classList.contains('open') === false) {
         kottiModal.classList.add('open');
-        document.body.insertBefore(overRay,footer)
     } else {
         event.preventDefault();
     }
@@ -113,21 +106,13 @@ kottiButton.addEventListener('click',function() {
 contactButton.addEventListener('click',function() {
     if (kottiModal.classList.contains('open') === false && 
         attiModal.classList.contains('open') === false) {
-        //お問合わせフォームモーダルの出現
         contactModal.classList.add('open');
-        //オーバーレイも出現させる
-        document.body.insertBefore(overRay,footer)
-        //制限時間設定
         let timerId = setInterval(function(){
             timeMsg.innerHTML = '<p>制限時間;' + reminingTimeNum + '秒 </p>'
             if (reminingTimeNum <= 0) {
                 alert('制限時間終了')
                 clearInterval(timerId)
-                reminingTimeNum = 6
-            } else if (contactModal.classList.contains('open') === false) {
-                //カウントダウン中にモーダル閉じたらカウントダウン中断する
-                clearInterval(timerId)
-                reminingTimeNum = 6
+                reminingTimeNum += 6
             }
             reminingTimeNum--
         },1000)
@@ -144,14 +129,10 @@ closeButton.forEach(function(element) {
     element.addEventListener('click', function(){
         if (attiModal.classList.contains('open')) {
             attiModal.classList.remove('open');
-            //オーバーレイも消える
-            overRay.remove()
         } else if (kottiModal.classList.contains('open')) {
             kottiModal.classList.remove('open');  
-            overRay.remove()
         } else if (contactModal.classList.contains('open')) {
             contactModal.classList.remove('open'); 
-            overRay.remove()
         } else {
             event.preventDefault();
         }
@@ -159,8 +140,6 @@ closeButton.forEach(function(element) {
 })
 
 //フォトギャラリー
-
-//画像部分とフレーム定義
 
 let album = [
     {src: './img/1564997869941.jpg'},
@@ -180,15 +159,12 @@ mainFlame.insertBefore(mainImage, null);
 
 let thumbFlame = document.querySelectorAll('.thumb-flame');
 
-//サブフレームに画像入れる
 
 for (let i = 0; i < album.length; i++) {
     let thumbImage = document.createElement('img');
     thumbImage.setAttribute('src',album[i].src);
     thumbFlame[i].insertBefore(thumbImage,null);
 }
-
-//サブフレームの画像クリックしたらメイン画像が切り替わる
 
 thumbFlame.forEach(function(flame){
     flame.addEventListener('click',function(event){
@@ -198,7 +174,7 @@ thumbFlame.forEach(function(flame){
     }) 
 })
 
-//questionのanswer出現・消失
+//questionのanswer
 //jquery
 
 $(function(){
@@ -233,7 +209,7 @@ textarea.addEventListener('keyup', function() {
     textMsg.innerHTML = '<p>あと「' + (maxTextNum - currentTextNum) + '」文字入力出来ます。</p>'
 })
 
-//お問合わせフォーム　制限時間 定義
+//お問合わせフォーム　制限時間
 
 let reminingTimeNum = 5
 

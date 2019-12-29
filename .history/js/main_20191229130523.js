@@ -56,7 +56,7 @@ let kottiModal = document.querySelector('.kottinoyu');
 
 let contactModal = document.querySelector('.contact-form');
 
-//オーバーレイ定義　モーダルボタン押したらdiv要素が追加される
+//オーバーレイ定義
 let overRay = document.createElement('div');
 
 overRay.classList.add('modal-bg')

@@ -118,6 +118,7 @@ html {
 
 body {
   font-size: 16px;
+  background-color: #fff;
 }
 
 .inner {
@@ -584,6 +585,7 @@ header {
   }
   .content-wrap.access .access-text {
     width: 60%;
+    font-size: 3vw;
   }
 }
 
@@ -599,6 +601,7 @@ header {
 
 .contact-form__wrap .contact-button {
   display: block;
+  font-size: 1.5vw;
   width: 40%;
   height: 3rem;
   text-align: center;
@@ -634,7 +637,7 @@ footer {
 
 .modal {
   display: none;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -645,6 +648,7 @@ footer {
 
 .open {
   display: block;
+  background-color: red;
 }
 
 .modal-logo {
@@ -721,5 +725,24 @@ footer {
 
 .contact-form .input-form input {
   width: 60px;
+}
+
+.modal-bg {
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 4px;
+  border: 1px solid black;
+  background-color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
