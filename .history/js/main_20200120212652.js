@@ -1,7 +1,6 @@
 //ヘッダーのドロップダウンメニュー
-//ハンバーガーメニュー押したらドロップダウン
 
-let ddmenuUl = document.querySelector('.ddmenu')
+let ddmenuUl = document.querySelector('.ddmenu');
 
 let hum = document.querySelector('.hum')
 
@@ -20,11 +19,10 @@ hum.addEventListener('click',function(){
                 duration: 500,
                 fill: 'forwards'
             }
-        )
+        );
     }
 })
 
-//ドロップアップ
 document.addEventListener('click',function(event) {
     if (ddmenuUl.clientHeight === 80 )　{
         if (event.target.parentNode.classList.contains('ddmenu') === false) {
@@ -39,56 +37,74 @@ document.addEventListener('click',function(event) {
                     duration: 500,
                     fill: 'forwards'
                 }
-            )
+            );
         }
     }
 })
 
 //モーダルの要素　モーダル出現ボタン定義
 
-//あっちの湯モーダル
-let attiButton = document.querySelector('.atti-spring')
+let attiButton = document.querySelector('.atti-spring');
 
-let attiModal = document.querySelector('.attinoyu')
+let kottiButton = document.querySelector('.kotti-spring');
 
+let contactButton = document.querySelector('.contact-button');
 
-//こっちの湯モーダル
-let kottiButton = document.querySelector('.kotti-spring')
+let attiModal = document.querySelector('.attinoyu');
 
-let kottiModal = document.querySelector('.kottinoyu')
+let kottiModal = document.querySelector('.kottinoyu');
 
-//お問い合わせフォームモーダル
-let contactButton = document.querySelector('.contact-button')
-
-let contactModal = document.querySelector('.contact-form')
+let contactModal = document.querySelector('.contact-form');
 
 //オーバーレイ定義　モーダルボタン押したらdiv要素が追加される
-let overRay = document.createElement('div')
+let overRay = document.createElement('div');
 
 overRay.classList.add('modal-bg')
 
 let footer = document.querySelector('footer')
 
-//ボタンクリックしたらモーダルとオーバーレイ出現する
+
+//JavaScriptでもオーバーレイ作れるよ
+
+// let overRayStyle = {
+//     display: 'none',
+//     width: '100%',
+//     height: '100%',
+//     backgroundcolor: 'rgba(0,0,0,0.5)',
+//     position: 'fixed',
+//     top: '0px',
+//     left:'0px',
+//     zindex: '1'
+// }
+
+// let over = overRay.style
+
+// for(var prop in overRayStyle) {
+
+//     overRay[prop] = overRayStyle[prop];
+    
+// }
+
+//ボタンクリックしたらモーダルとオーバーレイ出現するよ
 
 attiButton.addEventListener('click',function() {
     if (kottiModal.classList.contains('open') === false  &&
         contactModal.classList.contains('open') === false) {
-        attiModal.classList.add('open')
+        attiModal.classList.add('open');
         //オーバーレイも出現させる
         document.body.insertBefore(overRay,footer)
     } else {
-        event.preventDefault()
+        event.preventDefault();
     }
 })
 
 kottiButton.addEventListener('click',function() {
     if (attiModal.classList.contains('open') === false &&
         contactModal.classList.contains('open') === false) {
-        kottiModal.classList.add('open')
+        kottiModal.classList.add('open');
         document.body.insertBefore(overRay,footer)
     } else {
-        event.preventDefault()
+        event.preventDefault();
     }
 })
 
@@ -98,7 +114,7 @@ contactButton.addEventListener('click',function() {
     if (kottiModal.classList.contains('open') === false && 
         attiModal.classList.contains('open') === false) {
         //お問合わせフォームモーダルの出現
-        contactModal.classList.add('open')
+        contactModal.classList.add('open');
         //オーバーレイも出現させる
         document.body.insertBefore(overRay,footer)
         //制限時間設定
@@ -110,7 +126,6 @@ contactButton.addEventListener('click',function() {
                 contactModal.classList.remove('open')
                 overRay.remove()
                 textarea.value = ''
-                textMsg.innerHTML = '<p>あと「400」文字入力出来ます。</p>'
                 reminingTimeNum = 6
             } else if (contactModal.classList.contains('open') === false) {
                 //カウントダウン中にモーダル閉じたらカウントダウン中断する
@@ -120,28 +135,28 @@ contactButton.addEventListener('click',function() {
             reminingTimeNum--
         },1000)
     } else {
-        event.preventDefault()
+        event.preventDefault();
     }
 })
 
 //バツ印押したらモーダル消える
 
-let closeButton = document.querySelectorAll('.close-button')
+let closeButton = document.querySelectorAll('.close-button');
 
 closeButton.forEach(function(element) {
     element.addEventListener('click', function(){
         if (attiModal.classList.contains('open')) {
-            attiModal.classList.remove('open')
+            attiModal.classList.remove('open');
             //オーバーレイも消える
             overRay.remove()
         } else if (kottiModal.classList.contains('open')) {
-            kottiModal.classList.remove('open') 
+            kottiModal.classList.remove('open');  
             overRay.remove()
         } else if (contactModal.classList.contains('open')) {
-            contactModal.classList.remove('open')
+            contactModal.classList.remove('open'); 
             overRay.remove()
         } else {
-            event.preventDefault()
+            event.preventDefault();
         }
     })
 })
@@ -203,12 +218,11 @@ $(function(){
 });
 
 //お問い合わせフォーム 残り文字数表示
+
 let textarea = document.getElementById('textarea')
 
-//テキストエリア最大文字数
 let maxTextNum  = textarea.getAttribute('maxlength')
 
-//テキストメッセージ
 let textMsg = document.createElement('div')
 
 textMsg.innerHTML = '<p>あと「400」文字入力出来ます。</p>'
@@ -217,7 +231,6 @@ let parent = textarea.parentElement
 
 parent.insertBefore(textMsg, textarea)
 
-//キーアップするテキストメッセージの表示文字数が少なくなる
 textarea.addEventListener('keyup', function() {
     let currentTextNum = textarea.value.length
     textMsg.innerHTML = '<p>あと「' + (maxTextNum - currentTextNum) + '」文字入力出来ます。</p>'

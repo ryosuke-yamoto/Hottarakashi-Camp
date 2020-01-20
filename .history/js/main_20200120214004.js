@@ -203,12 +203,11 @@ $(function(){
 });
 
 //お問い合わせフォーム 残り文字数表示
+
 let textarea = document.getElementById('textarea')
 
-//テキストエリア最大文字数
 let maxTextNum  = textarea.getAttribute('maxlength')
 
-//テキストメッセージ
 let textMsg = document.createElement('div')
 
 textMsg.innerHTML = '<p>あと「400」文字入力出来ます。</p>'
@@ -217,7 +216,6 @@ let parent = textarea.parentElement
 
 parent.insertBefore(textMsg, textarea)
 
-//キーアップするテキストメッセージの表示文字数が少なくなる
 textarea.addEventListener('keyup', function() {
     let currentTextNum = textarea.value.length
     textMsg.innerHTML = '<p>あと「' + (maxTextNum - currentTextNum) + '」文字入力出来ます。</p>'
